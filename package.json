@@ -1,0 +1,20 @@
+{
+  "name": "typescript-basics",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "watch-ts": "nodemon index.ts",
+    "build": "tsc -w index.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sidiDev/typescript-basics.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sidiDev/typescript-basics/issues"
+  },
+  "homepage": "https://github.com/sidiDev/typescript-basics#readme"
+}
