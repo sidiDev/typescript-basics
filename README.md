@@ -27,8 +27,51 @@ Let's install the latest stable version:
 npm install -g typescript
 ```
 
-And to check from the version:
+And to check the version:
+
+```bash
+tsc -v
+```
+
+## Let's get started
+
+In this part we will learn how to run Typescript code. Since browsers don't support Typescript, we need a compiler to convert our code from Typescript => to JavaScript, for example if we create a file called index.ts, when the compiler run, index.ts file will converted to index.js, then we can import our index.js file from our HTMl file.
+
+There are many ways to run Typescript code, so we will not explain all these ways, but you can search in google to increase your knowledge.
+
+#### The first option:
+This command will convert the file to JavaScript, but without watching the changes, which means you have to run this command everytime you make changes in your typescript file.
+
+``` bash
+tsc filename.ts
 
 ```
-tsc -v
+
+and to watch the changes you can use this command one time.
+
+``` bash
+tsc -w filename.ts
+
+```
+
+#### The second option:
+You can also use nodejs to run your code, but it will not convert your typescript file to javascript, you can only see the output from the console or your command line, by using nodejs you have to run this command everytime you make changes in your typescript file
+
+``` bash
+node filename.ts
+
+```
+
+and to watch the changes you have to install nodemon, run this command to install it.
+
+``` bash
+npm install -g nodemon
+
+```
+
+then
+
+``` bash
+nodemon filename.ts
+
 ```
