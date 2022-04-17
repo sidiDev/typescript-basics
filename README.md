@@ -44,34 +44,29 @@ This command will convert the file to JavaScript, but without watching the chang
 
 ``` bash
 tsc filename.ts
-
 ```
 
 and to watch the changes you can use this command one time.
 
 ``` bash
 tsc -w filename.ts
-
 ```
 
 #### The second option:
-You can also use nodejs to run your code, but it will not convert your typescript file to javascript, you can only see the output from the console or your command line, by using nodejs you have to run this command everytime you make changes in your typescript file
+You can also use nodejs to run your code, but it will not convert your typescript file to javascript, you can only see the output from the console or your command line, by using nodejs you have to run this command everytime you make changes in your typescript file.
 
 ``` bash
 node filename.ts
-
 ```
 
 and to watch the changes you have to install nodemon, run this command to install it.
 
 ``` bash
 npm install -g nodemon
-
 ```
 
 then
 
 ``` bash
 nodemon filename.ts
-
 ```
