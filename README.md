@@ -18,3 +18,17 @@ Large-scale JavaScript development can be difficult. But TypeScript makes it eas
 - Types have a proven ability to enhance code quality and understandability.
 - Types increase your agility when doing refactoring.
 - TypeScript helps you dealing with growing teams
+
+## Installing
+
+Let's install the latest stable version:
+
+```bash
+npm install -g typescript
+```
+
+And to check from the version:
+
+```
+tsc -v
+```
