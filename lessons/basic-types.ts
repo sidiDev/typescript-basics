@@ -15,4 +15,20 @@ console.log(str) // The output: Hello world
 
 // Array
 let list:number[] = [1, 2, 3];
+
 console.log(list) // The output: [1, 2, 3]
+
+// Any
+let anyType:any = 2;
+anyType = [1, 2, 3]
+anyType = "String"
+
+console.log(anyType); // The output: String
+
+// Null and Undefined
+
+let u: undefined = undefined;
+let n: null = null;
+
+console.log(u) // The output: undefined
+

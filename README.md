@@ -130,6 +130,28 @@ we use the type string to refer to these textual datatypes. Just like JavaScript
 let str:string = "Hello world";
 ```
 
+#### Any
+
+In some situations, not all type information is available or its declaration would take an inappropriate amount of effort. These may occur for values from code that has been written without TypeScript or a 3rd party library. In these cases, we might want to opt-out of type checking.
+
+We can redeclare the varaible without any error.
+
+```ts
+let anyType:any = 2;
+anyType = "String"
+anyType = [1, 2, 3]
+```
+
+#### Null and Undefined
+
+Null it is used when an object does not have any value.
+Undefined denotes value given to uninitialized variable.
+
+```ts
+let u:undefined = undefined;
+let n:null = null;
+```
+
 #### Array
 
 TypeScript, like JavaScript, allows you to work with arrays of values.
