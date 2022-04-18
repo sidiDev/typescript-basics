@@ -134,7 +134,7 @@ let str:string = "Hello world";
 
 In some situations, not all type information is available or its declaration would take an inappropriate amount of effort. These may occur for values from code that has been written without TypeScript or a 3rd party library. In these cases, we might want to opt-out of type checking.
 
-We can redeclare the varaible without any error.
+We can redeclare the varaible without any errors.
 
 ```ts
 let anyType:any = 2;
@@ -157,11 +157,15 @@ let n:null = null;
 TypeScript, like JavaScript, allows you to work with arrays of values.
 
 ```ts
-let list:number[] = [1, 2, 3];
+let listNum:number[] = [1, 2, 3];
+let listStr:string[] = ["A", "B", "C"];
+let listBool:boolean[] = [false, true];
 ```
 
 Or you can use a generic array type, `Array<elemType>`:
 
 ```ts
 let list:Array<number> = [1, 2, 3];
+let list:Array<string> = ["A", "B", "C"];
+let list:Array<boolean> = [false, true];
 ```
