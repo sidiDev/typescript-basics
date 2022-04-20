@@ -26,9 +26,18 @@ anyType = "String"
 console.log(anyType); // The output: String
 
 // Null and Undefined
-
 let u: undefined = undefined;
 let n: null = null;
 
 console.log(u) // The output: undefined
 
+// Tuple
+let arrTuple:[boolean, string, number] = [true, "John", 1]
+
+console.log(arrTuple);
+
+// Union
+let unionVar:number | string;
+unionVar = "Hello world"
+
+console.log(unionVar);
