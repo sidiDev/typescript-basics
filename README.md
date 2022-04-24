@@ -224,7 +224,7 @@ unionVar = true
 
 #### Enum
 
-TypeScript enums allow us to define or declare a set of named constants i.e. a collection of related values which could either be in the form of a string or number or any other data type.
+TypeScript [enums](https://www.typescriptlang.org/docs/handbook/enums.html) allow us to define or declare a set of named constants i.e. a collection of related values which could either be in the form of a string or number or any other data type.
 
 **Numeric enums**
 
@@ -349,3 +349,75 @@ Output
 ```
 
 > Enums should be used whenever there is a small set of fixed values available that are closely related and further these values are known at compile time.
+
+#### Object
+
+Apart from primitives, the most common sort of type you’ll encounter is an object type. This refers to any JavaScript value with properties, which is almost all of them! To define an object type, we simply list its properties and their types.
+
+For example, here’s an object with some properties
+
+```ts
+const user = {
+    name: "Sidi",
+    job: "Software engineer",
+    age: 29,
+    isAdmin: true
+}
+```
+
+And to define an object type, here's an example
+
+```ts
+const user:{
+    name: string,
+    job: string,
+    age: number,
+    isAdmin: boolean
+} = {
+    name: "Sidi",
+    job: "Software engineer",
+    age: 29,
+    isAdmin: true
+}
+```
+
+Or you can use this way to define an object.
+
+```ts
+
+type User = {
+    name: string,
+    job: string,
+    age: number,
+    isAdmin: boolean
+}
+
+const user:User = {
+    name: "Sidi",
+    job: "Software engineer",
+    age: 29,
+    isAdmin: true
+}
+```
+
+You can also use object type with ``function``, and to do that let's create a function that take a parameter with a type with two properties.
+
+```ts
+function userDetails(pt: { name: string, age:number }) {
+    console.log(`My name is ${pt.name}, and I have ${pt.age} years old.`)
+}
+
+userDetails({ name: "Sidi", age: 28 })
+```
+
+> **Optional Properties**: Object types can also specify that some or all of their properties are optional. To do this, add a ? after the property name:
+
+```ts
+function userDetails(pt: { name: string, age?:number }) {
+    console.log(`My name is ${pt.name}, and I have ${pt.age} years old.`)
+}
+
+// Both are OK
+userDetails({ name: "Sidi" })
+userDetails({ name: "Sidi", age: 28 })
+```

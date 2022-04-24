@@ -66,3 +66,21 @@ console.log(CarName);
     Swift: 3
     }
 */
+
+// Object
+
+type User = {
+    name: string,
+    job: string,
+    age: number,
+    isAdmin: boolean
+}
+
+const user:User = {
+    name: "Sidi",
+    job: "Software engineer",
+    age: 29,
+    isAdmin: true
+}
+
+console.log(user);
