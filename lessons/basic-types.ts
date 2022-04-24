@@ -41,3 +41,28 @@ let unionVar:number | string;
 unionVar = "Hello world"
 
 console.log(unionVar);
+
+// Enum
+enum CarName {
+    Honda,
+    Toyota,
+    Alto,
+    Swift,
+}
+
+console.log(CarName);
+
+/*
+    Output:
+
+    {
+    '0': 'Honda',
+    '1': 'Toyota',
+    '2': 'Alto',
+    '3': 'Swift',
+    Honda: 0,
+    Toyota: 1,
+    Alto: 2,
+    Swift: 3
+    }
+*/
