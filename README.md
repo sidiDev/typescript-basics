@@ -169,3 +169,183 @@ let list:Array<number> = [1, 2, 3];
 let list:Array<string> = ["A", "B", "C"];
 let list:Array<boolean> = [false, true];
 ```
+
+#### Tuple
+
+Tuple types allow you to express an array with a fixed number of elements whose types are known, but need not be the same. For example, you may want to represent a value as a pair of a string and a number:
+
+```ts
+let arrTuple:[boolean, string, number] = [true, "John", 1] // Now everything is ok
+
+// Redeclear the variable incorrectly
+arrTuple = [false, 1, "Hello"]
+```
+
+```bash
+Type 'number' is not assignable to type 'string'.
+Type 'string' is not assignable to type 'number'.
+```
+
+#### Union
+
+The first way to combine types you might see is a union type. A union type is a type formed from two or more other types, representing values that may be any one of those types.
+
+```ts
+let unionVar:number | string
+unionVar = "Hello world"
+```
+
+or 
+
+```ts
+let unionVar:number | string
+unionVar = 2
+```
+
+Let's try to give it a boolean as a value.
+
+```ts
+let unionVar:number | string
+unionVar = true
+```
+
+we get an error
+
+```bash
+Type 'boolean' is not assignable to type 'string | number'.
+```
+
+And to solve this problem we have to add boolean type.
+
+```ts
+let unionVar:number | string | boolean
+unionVar = true
+```
+
+#### Enum
+
+TypeScript enums allow us to define or declare a set of named constants i.e. a collection of related values which could either be in the form of a string or number or any other data type.
+
+**Numeric enums**
+
+Numeric enums store string values as numbers and they can be declared using the keyword enum.
+
+**Example**
+
+In this example, we will be creating a numeric enum that will store Cars information and further we will display some specific results using that enum.
+
+```ts
+enum CarName {
+    Honda,
+    Toyota,
+    Alto,
+    Swift,
+}
+
+console.log(CarName);
+```
+
+Output
+
+```bash
+{
+  '0': 'Honda',
+  '1': 'Toyota',
+  '2': 'Alto',
+  '3': 'Swift',
+  Honda: 0,
+  Toyota: 1,
+  Alto: 2,
+  Swift: 3
+}
+```
+
+As you can see enums store string values as numbers.
+
+Let's see how to access the string values
+
+```ts
+console.log(CarName.Alto); // Output: 2
+console.log(CarName.[2]) // Output: Alto
+```
+
+What if we initialize ``Honda`` with ``3``, let's try this.
+
+```ts
+enum CarName {
+    Honda = 3,
+    Toyota,
+    Alto,
+    Swift,
+}
+
+console.log(CarName);
+```
+
+Output
+
+```bash
+{
+  '3': 'Honda',
+  '4': 'Toyota',
+  '5': 'Alto',
+  '6': 'Swift',
+  Honda: 3,
+  Toyota: 4,
+  Alto: 5,
+  Swift: 6
+}
+```
+
+As you can see all of the following members are auto-incremented from that point on.
+
+**String enums**
+
+String enums are quite similar to numeric enums, but their enum values are initialized with string values instead of numeric values. String enums have better readability than numeric enums.
+
+**Example**
+
+In this example, we will be creating a string enum that will store all the values in the string data type
+
+```ts
+enum fruitsName {
+    Apple = "APPLE",
+    Banana = "Banana",
+    Mango = "Mango",
+    Papaya = "Papaya"
+}
+console.log(fruitsName);
+```
+
+Output
+
+```bash
+{ Apple: 'APPLE', Banana: 'Banana', Mango: 'Mango', Papaya: 'Papaya' }
+```
+
+**Heterogeneous enums**
+
+Heterogenous enums contain both numeric and string enums values. The following example will explain Heterogenous enums in a much better and clear manner
+
+```ts
+enum userDetails {
+    name = "Sidi",
+    age = 29,
+    job = "Software engineer",
+}
+
+console.log(userDetails)
+```
+
+Output
+
+```bash
+{ 
+    '29': 'age', 
+    name: 'Sidi', 
+    age: 29, 
+    job: 'Software engineer' 
+}
+```
+
+> Enums should be used whenever there is a small set of fixed values available that are closely related and further these values are known at compile time.
