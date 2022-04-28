@@ -421,3 +421,5 @@ function userDetails(pt: { name: string, age?:number }) {
 userDetails({ name: "Sidi" })
 userDetails({ name: "Sidi", age: 28 })
 ```
+
+> Quick overview on classes from [here](https://github.com/sidiDev/typescript-basics/tree/classes)
